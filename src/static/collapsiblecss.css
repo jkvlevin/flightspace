@@ -1,0 +1,73 @@
+.Collapsible {
+  background-color: #f8f8f8;
+ }
+
+.Collapsible__contentInner {
+  padding: 10px;
+  border: 1px solid #ebebeb;
+  border-top: 0; }
+  .Collapsible__contentInner p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 20px; }
+    .Collapsible__contentInner p:last-child {
+      margin-bottom: 0; }
+
+.Collapsible__trigger {
+  display: block;
+  font-weight: 400;
+  text-decoration: none;
+  color: #333333;
+  position: relative;
+  border-bottom: 1px solid #262228;
+  padding: 10px;
+  color: #262228; }
+  .Collapsible__trigger:after {
+    content: url('down-arrow.svg');
+    transform: scale(.4);
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: block;
+    transition: transform 300ms; }
+  .Collapsible__trigger.is-open:after {
+    transform: rotateZ(180deg) scale(.5); }
+  .Collapsible__trigger.is-disabled {
+    opacity: 0.5;
+    background-color: grey; }
+
+
+.Collapsible-t__contentInner {
+  padding: 10px;
+  border: 1px solid #ebebeb;
+  border-top: 0; }
+  .Collapsible-t__contentInner p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 20px; }
+    .Collapsible-t__contentInner p:last-child {
+      margin-bottom: 0; }
+
+.Collapsible-t__trigger {
+  display: block;
+  font-weight: 400;
+  text-decoration: none;
+  color: #333333;
+  background-color: #878787;
+  position: relative;
+  border-bottom: 1px solid #262228;
+  padding: 10px;
+  color: #f8f8f8; }
+  .Collapsible-t__trigger:after {
+    content: url('down-arrow2.svg');
+    transform: scale(.4);
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: block;
+    transition: transform 300ms; }
+  .Collapsible-t__trigger.is-open:after {
+    transform: rotateZ(180deg) scale(.5); }
+  .Collapsible-t__trigger.is-disabled {
+    opacity: 0.5;
+    background-color: grey; }
