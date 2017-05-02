@@ -1,5 +1,7 @@
 .Collapsible {
   background-color: #f8f8f8;
+  font-size: 13px;
+  line-height: 1.2;
  }
 
 .Collapsible__contentInner {
@@ -23,7 +25,7 @@
   padding: 10px;
   color: #262228; }
   .Collapsible__trigger:after {
-    content: url('down-arrow.svg');
+    /*content: url('down-arrow.svg');*/
     transform: scale(.4);
     position: absolute;
     right: 10px;
@@ -63,7 +65,7 @@
     transform: scale(.4);
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 5px;
     display: block;
     transition: transform 300ms; }
   .Collapsible-t__trigger.is-open:after {

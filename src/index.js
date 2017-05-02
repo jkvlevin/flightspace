@@ -5,8 +5,6 @@ import { AppContainer } from 'react-hot-loader';
 import Root from './components/Root';
 import configureStore from './store/configureStore';
 import { syncHistoryWithStore } from 'react-router-redux';
-import Bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
-import Leaflet from 'leaflet/dist/leaflet.css';
 
 const store = configureStore();
 

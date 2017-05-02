@@ -1,5 +1,7 @@
 import React, { PropTypes } from 'react';
 import Header from './Header';
+import Leaflet from 'leaflet/dist/leaflet.css';
+import Bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component {
   render() {

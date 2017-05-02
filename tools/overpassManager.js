@@ -13,7 +13,7 @@ export function makeQuery(area, type, callback) {
           if (error) {
             return callback(error, null);
           } else {
-            sanitizeFeatures(data, (name, noname, simplified) => {
+            sanitizeBuildings(data, (name, noname, simplified) => {
               retData['namedBuildings'] = name;
               retData['nonameBuildings'] = noname;
               retData['buildingsSimplified'] = simplified;
@@ -22,20 +22,22 @@ export function makeQuery(area, type, callback) {
                 return callback(error, null);
               } else {
                 // retData['additionalFeatures'] = data;
-                sanitizeFeatures(data, (name, noname, simplified) => {
+                sanitizeFeatures(data, (name, noname, simpWays, simpOther) => {
                   retData['namedFeatures'] = name;
                   retData['nonameFeatures'] = noname;
-                  retData['featuresSimplified'] = simplified;
-                  queryCenter(area, type, (error, data) => {
-                    if (error) {
-                      return callback(error, null);
-                    } else {
-                      retData['center'] = data;
-                      // const d = JSON.stringify(retData, null, 2);
-                      // fs.writeFile('./src/static/data.json', d, 'utf-8');
-                      return callback(null, retData);
-                    }
-                  });
+                  retData['waysSimplified'] = simpWays;
+                  retData['otherSimplified'] = simpOther;
+                  // return callback(null, retData);
+                  // queryCenter(area, type, (error, data) => {
+                  //   if (error) {
+                  //     return callback(error, null);
+                  //   } else {
+                  //     retData['center'] = data;
+                  const d = JSON.stringify(retData, null, 2);
+                  fs.writeFile('./src/static/data1.json', d, 'utf-8');
+                  //     return callback(null, retData);
+                  //   }
+                  // });
                 });
                 }
               });
@@ -85,19 +87,34 @@ function queryBuildings(area, callback) {
   });
 }
 
-function sanitizeFeatures(data, callback) {
-  let named = [];
-  let noname = [];
-  let namesimplefied = [];
-  for (let i = data.features.length - 1; i > 0; i--) {
-    if (data.features[i].properties.name || data.features[i].properties.tags.name) {
+function sanitizeBuildings(data, callback) {
+  let named = [], noname = [], simplified = [];
+  for (let i = 0; i < data.features.length; i++) {
+    if (data.features[i].properties.tags.name) {
       named.push(data.features[i]);
-      data.features[i].properties.name ? namesimplefied.push({name: data.features[i].properties.name, id: data.features[i].id, highway: data.features[i].properties.tags.highway, height: 10}) : namesimplefied.push({name: data.features[i].properties.tags.name, id: data.features[i].id, highway: data.features[i].properties.tags.highway, height:10 });
-    } else if(!data.features[i].properties.name && !data.features[i].properties.tags.name) {
+      simplified.push({name: data.features[i].properties.tags.name, id: data.features[i].id, highway: data.features[i].properties.tags.highway, height:40, noFly: false });
+    } else if(!data.features[i].properties.tags.name) {
       noname.push(data.features[i]);
+    } if (i == data.features.length-1) {
+      return callback(named, noname, simplified);
     }
-    if (i == 1) {
-      return callback(named, noname, namesimplefied);
+  }
+}
+
+function sanitizeFeatures(data, callback) {
+  let named = [], noname = [], simpWays = [], simpOther = [];
+  for (let i = 0; i < data.features.length; i++) {
+    if (data.features[i].properties.tags.name) {
+      named.push(data.features[i]);
+      if (data.features[i].properties.tags.highway) {
+        simpWays.push({name: data.features[i].properties.tags.name, id: data.features[i].id, highway: data.features[i].properties.tags.highway, noFly: false });
+      } else {
+        simpOther.push({name: data.features[i].properties.tags.name, id: data.features[i].id, height:40, noFly: false });
+      }
+    } else if(!data.features[i].properties.tags.name) {
+      noname.push(data.features[i]);
+    } if (i == data.features.length-1) {
+      return callback(named, noname, simpWays, simpOther);
     }
   }
 }

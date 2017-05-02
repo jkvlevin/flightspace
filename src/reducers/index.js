@@ -1,9 +1,11 @@
 import {routerReducer} from 'react-router-redux';
 import { combineReducers } from 'redux';
-import homeReducer from './homeReducer';
+import mapReducer from './mapReducer';
+import markuptoolReducer from './markuptoolReducer';
 
 const rootReducer = combineReducers({
-  homeReducer,
+  mapReducer,
+  markuptoolReducer,
   routing: routerReducer
 });
 export default rootReducer;
