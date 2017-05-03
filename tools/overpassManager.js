@@ -28,16 +28,16 @@ export function makeQuery(area, type, callback) {
                   retData['waysSimplified'] = simpWays;
                   retData['otherSimplified'] = simpOther;
                   // return callback(null, retData);
-                  // queryCenter(area, type, (error, data) => {
-                  //   if (error) {
-                  //     return callback(error, null);
-                  //   } else {
-                  //     retData['center'] = data;
-                  const d = JSON.stringify(retData, null, 2);
-                  fs.writeFile('./src/static/data1.json', d, 'utf-8');
-                  //     return callback(null, retData);
-                  //   }
-                  // });
+                  queryCenter(area, type, (error, data) => {
+                    if (error) {
+                      return callback(error, null);
+                    } else {
+                      retData['center'] = data;
+                      const d = JSON.stringify(retData, null, 2);
+                      fs.writeFile('./src/static/data1.json', d, 'utf-8');
+                  //  return callback(null, retData);
+                    }
+                  });
                 });
                 }
               });
@@ -92,7 +92,7 @@ function sanitizeBuildings(data, callback) {
   for (let i = 0; i < data.features.length; i++) {
     if (data.features[i].properties.tags.name) {
       named.push(data.features[i]);
-      simplified.push({name: data.features[i].properties.tags.name, id: data.features[i].id, highway: data.features[i].properties.tags.highway, height:40, noFly: false });
+      simplified.push({name: data.features[i].properties.tags.name, id: data.features[i].id, highway: data.features[i].properties.tags.highway, height:40, flyAbove: 90, noFly: false });
     } else if(!data.features[i].properties.tags.name) {
       noname.push(data.features[i]);
     } if (i == data.features.length-1) {
@@ -107,9 +107,9 @@ function sanitizeFeatures(data, callback) {
     if (data.features[i].properties.tags.name) {
       named.push(data.features[i]);
       if (data.features[i].properties.tags.highway) {
-        simpWays.push({name: data.features[i].properties.tags.name, id: data.features[i].id, highway: data.features[i].properties.tags.highway, noFly: false });
+        simpWays.push({name: data.features[i].properties.tags.name, id: data.features[i].id, height:0, flyAbove:50, highway: data.features[i].properties.tags.highway, noFly: false });
       } else {
-        simpOther.push({name: data.features[i].properties.tags.name, id: data.features[i].id, height:40, noFly: false });
+        simpOther.push({name: data.features[i].properties.tags.name, id: data.features[i].id, height:40, flyAbove:90, noFly: false });
       }
     } else if(!data.features[i].properties.tags.name) {
       noname.push(data.features[i]);

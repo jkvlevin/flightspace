@@ -5,6 +5,48 @@ export function loadSimplified(areaData) {
   return { type: types.LOAD_SIMPLIFIED, areaData };
 }
 
+export function changeSelected(feature, type) {
+  return function (dispatch, getState) {
+    let fullFeature = {};
+    let simFeature = {};
+    if (type === 'fab') {
+      fullFeature = getState().mapReducer.flyAboveBuildings.find(b => b.id === feature);
+      simFeature = getState().markuptoolReducer.buildingsSimplified.find(b=> b.id === feature);
+    }
+    else if(type === 'nfb'){
+      fullFeature = getState().mapReducer.noFlyBuildings.find(b => b.id === feature);
+      simFeature = getState().markuptoolReducer.buildingsSimplified.find(b=> b.id === feature);
+    }
+    else if (type == 'faw') {
+      fullFeature = getState().mapReducer.flyAboveFeatures.find(b => b.id === feature);
+      simFeature = getState().markuptoolReducer.waysSimplified.find(b=> b.id === feature);
+    }
+    else if (type == 'nfw') {
+      fullFeature = getState().mapReducer.noFlyFeatures.find(b => b.id === feature);
+      simFeature = getState().markuptoolReducer.waysSimplified.find(b=> b.id === feature);
+    }
+    else if (type == 'fao') {
+      fullFeature = getState().mapReducer.flyAboveFeatures.find(b => b.id === feature);
+      simFeature = getState().markuptoolReducer.otherSimplified.find(b=> b.id === feature);
+    }
+    else if (type == 'nfo') {
+      fullFeature = getState().mapReducer.noFlyFeatures.find(b => b.id === feature);
+      simFeature = getState().markuptoolReducer.otherSimplified.find(b=> b.id === feature);
+    }
+
+    dispatch(selectFeature(fullFeature));
+    dispatch(selectSimple(simFeature));
+  };
+}
+
+function selectFeature(feature) {
+  return { type: types.SELECT_FEATURE, feature };
+}
+
+function selectSimple(feature) {
+  return { type: types.SELECT_SIMPLE, feature };
+}
+
 export function setNoFlyBuilding(building) {
   return function (dispatch, getState) {
     let fab = [], nof = [], f = getState().mapReducer.flyAboveBuildings;
@@ -43,7 +85,7 @@ export function setNoFlyFeature(feature, type) {
     }
 
     let sim = [], s = [];
-    if (type == "way") {s = getState().markuptoolReducer.waysSimplified;}
+    if (type == "faw") {s = getState().markuptoolReducer.waysSimplified;}
     else {s = getState().markuptoolReducer.otherSimplified;}
 
     for (let i = 0; i < s.length; i++) {
@@ -56,7 +98,7 @@ export function setNoFlyFeature(feature, type) {
       }
     }
     dispatch(moveFeature(nof, fab));
-    if (type == "way") {dispatch(updateSimplifiedWays(sim));}
+    if (type == "faw") {dispatch(updateSimplifiedWays(sim));}
     else {dispatch(updatedSimplifiedOther(sim));}
   }
 }
@@ -99,7 +141,7 @@ export function setFlyAboveFeature(feature, type) {
     }
 
     let sim = [], s = [];
-    if (type == "way") {s = getState().markuptoolReducer.waysSimplified;}
+    if (type == "nfw") {s = getState().markuptoolReducer.waysSimplified;}
     else {s = getState().markuptoolReducer.otherSimplified;}
 
     for (let i = 0; i < s.length; i++) {
@@ -112,7 +154,7 @@ export function setFlyAboveFeature(feature, type) {
       }
     }
     dispatch(moveFeature(nof, fab));
-    if (type == "way") {dispatch(updateSimplifiedWays(sim));}
+    if (type == "nfw") {dispatch(updateSimplifiedWays(sim));}
     else {dispatch(updatedSimplifiedOther(sim));}
   }
 }

@@ -9,6 +9,7 @@ const initialState = {
   waysSimplified: data.waysSimplified.sort(comparator),
   otherSimplified: data.otherSimplified.sort(comparator),
   buildingsSimplified: data.buildingsSimplified.sort(comparator),
+  selectedSimplified: {name : '', height: '', flyAbove: ''},
 };
 
 export default function markuptoolReducer(state = initialState, action) {
@@ -21,15 +22,22 @@ export default function markuptoolReducer(state = initialState, action) {
       });
     case types.UPDATE_SIMPLIFIED_BUILDING:
       return Object.assign({}, state, {
-        buildingsSimplified: action.sim.slice().sort(comparator)
+        buildingsSimplified: action.sim.slice().sort(comparator),
+        selectedSimplified: {name: '', height: '', flyAbove: ''}
       });
     case types.UPDATE_SIMPLIFIED_WAYS:
       return Object.assign({}, state, {
-        waysSimplified: action.sim.slice().sort(comparator)
+        waysSimplified: action.sim.slice().sort(comparator),
+        selectedSimplified: {name: '', height: '', flyAbove: ''}
       });
     case types.UPDATE_SIMPLIFIED_OTHER:
       return Object.assign({}, state, {
-        otherSimplified: action.sim.slice().sort(comparator)
+        otherSimplified: action.sim.slice().sort(comparator),
+        selectedSimplified: {name: '', height: '', flyAbove: ''}
+      });
+    case types.SELECT_SIMPLE:
+      return Object.assign({}, state, {
+        selectedSimplified: action.feature
       });
     default:
       return state;

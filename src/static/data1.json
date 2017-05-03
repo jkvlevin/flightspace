@@ -1182,6 +1182,14 @@
                   40.3512332
                 ],
                 [
+                  -74.6549773,
+                  40.3512752
+                ],
+                [
+                  -74.6550725,
+                  40.3514574
+                ],
+                [
                   -74.65508,
                   40.3514717
                 ],
@@ -1206,8 +1214,16 @@
                   40.3513936
                 ],
                 [
+                  -74.6553014,
+                  40.3513307
+                ],
+                [
                   -74.6552101,
                   40.3511559
+                ],
+                [
+                  -74.6552065,
+                  40.3511489
                 ],
                 [
                   -74.6551482,
@@ -16630,60 +16646,6 @@
     },
     {
       "type": "Feature",
-      "id": "way/427935024",
-      "properties": {
-        "type": "way",
-        "id": 427935024,
-        "tags": {
-          "building": "yes",
-          "name": "Labyrinth Books",
-          "shop": "books"
-        },
-        "relations": [],
-        "meta": {}
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -74.6587263,
-              40.3500923
-            ],
-            [
-              -74.6588926,
-              40.3504161
-            ],
-            [
-              -74.658906,
-              40.3504422
-            ],
-            [
-              -74.6591377,
-              40.3503744
-            ],
-            [
-              -74.6591545,
-              40.3504131
-            ],
-            [
-              -74.6593118,
-              40.3503705
-            ],
-            [
-              -74.6591322,
-              40.3499861
-            ],
-            [
-              -74.6587263,
-              40.3500923
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
       "id": "way/427935025",
       "properties": {
         "type": "way",
@@ -16767,8 +16729,15 @@
         "type": "way",
         "id": 427935026,
         "tags": {
-          "building": "university",
-          "name": "Bainbridge House"
+          "addr:state": "NJ",
+          "building": "yes",
+          "ele": "55",
+          "gnis:county_name": "Mercer",
+          "gnis:feature_id": "2044199",
+          "gnis:import_uuid": "57871b70-0100-4405-bb30-88b2e001a944",
+          "gnis:reviewed": "no",
+          "name": "Bainbridge House",
+          "source": "USGS Geonames"
         },
         "relations": [],
         "meta": {}
@@ -16839,6 +16808,14 @@
               40.3512332
             ],
             [
+              -74.6549773,
+              40.3512752
+            ],
+            [
+              -74.6550725,
+              40.3514574
+            ],
+            [
               -74.65508,
               40.3514717
             ],
@@ -16861,6 +16838,10 @@
             [
               -74.6553343,
               40.3513936
+            ],
+            [
+              -74.6553014,
+              40.3513307
             ],
             [
               -74.6552101,
@@ -22041,6 +22022,58 @@
     },
     {
       "type": "Feature",
+      "id": "way/427935024",
+      "properties": {
+        "type": "way",
+        "id": 427935024,
+        "tags": {
+          "building": "retail"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -74.6587263,
+              40.3500923
+            ],
+            [
+              -74.6588926,
+              40.3504161
+            ],
+            [
+              -74.658906,
+              40.3504422
+            ],
+            [
+              -74.6591377,
+              40.3503744
+            ],
+            [
+              -74.6591545,
+              40.3504131
+            ],
+            [
+              -74.6593118,
+              40.3503705
+            ],
+            [
+              -74.6591322,
+              40.3499861
+            ],
+            [
+              -74.6587263,
+              40.3500923
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
       "id": "way/428106571",
       "properties": {
         "type": "way",
@@ -23187,1224 +23220,1421 @@
       "name": "Nassau Hall",
       "id": "way/27341267",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Firestone Library",
       "id": "way/27341305",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "University Chapel",
       "id": "way/27341319",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Prospect House",
       "id": "way/27341367",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Frist Campus Center",
       "id": "way/27341386",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Dillon Gymnasium",
       "id": "way/27341417",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Old Graduate College",
       "id": "way/27341764",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "New Graduate College",
       "id": "way/27341829",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Clio Hall",
       "id": "way/27364709",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Whig Hall",
       "id": "way/27364736",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "East Pyne",
       "id": "way/27364778",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "McCormick Hall",
       "id": "way/27365000",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Computer Science Building",
       "id": "way/40717826",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Friend Center",
       "id": "way/40717843",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Wallace Social Science Center",
       "id": "way/40717868",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Sherrerd Hall",
       "id": "way/40717871",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Mudd Library",
       "id": "way/40717881",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Princeton University Press",
       "id": "way/40717892",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Hoyt Lab",
       "id": "way/40717933",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "20 Washington Road",
       "id": "way/40718011",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Robertson Hall",
       "id": "way/40718016",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Corwin Hall",
       "id": "way/40718022",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Bendheim Hall",
       "id": "way/40718026",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Fisher Hall",
       "id": "way/40718029",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Bendheim Center for Finance",
       "id": "way/40718031",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "McCosh Hall",
       "id": "way/40718042",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Dickinson Hall",
       "id": "way/40718052",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Architecture School",
       "id": "way/40718191",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Marx Hall",
       "id": "way/40718382",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "1879 Hall",
       "id": "way/40718784",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Dodge Hall",
       "id": "way/40719576",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Murray Theater",
       "id": "way/40719586",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Edwards Hall",
       "id": "way/40719644",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Dod Hall",
       "id": "way/40719645",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Woolworth Hall",
       "id": "way/40719646",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Little Hall",
       "id": "way/40719650",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Witherspoon Hall",
       "id": "way/40719652",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Buyers Hall",
       "id": "way/40719660",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Blair Hall",
       "id": "way/40719672",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Joline Hall",
       "id": "way/40719679",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Campbell Hall",
       "id": "way/40719683",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Alexander Hall",
       "id": "way/40719692",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "36 University Place",
       "id": "way/40719695",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Lockhart Hall",
       "id": "way/40719708",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "48 University Place",
       "id": "way/40719711",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Foulke Hall",
       "id": "way/40719729",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Henry Hall",
       "id": "way/40719730",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Laughlin/1901 Hall",
       "id": "way/40719733",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Pyne Hall",
       "id": "way/40719737",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "New South",
       "id": "way/59268017",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "200 Elm",
       "id": "way/59268018",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Baker Rink",
       "id": "way/59268019",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "McCarter Theater Center",
       "id": "way/59268020",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "MacMillan",
       "id": "way/59268693",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Carl Icahn Laboratory",
       "id": "way/59268696",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Frick Chemistry Laboratory",
       "id": "way/59268697",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "North Garage",
       "id": "way/109776107",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Lewis Library",
       "id": "way/131929874",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Jadwin Hall",
       "id": "way/140418353",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Peyton Hall",
       "id": "way/140418355",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "McDonnell Hall",
       "id": "way/140418360",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Fine Hall",
       "id": "way/140418364",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Caldwell Field House",
       "id": "way/140432050",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Fitzrandolph Observatory",
       "id": "way/140432815",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Arch Lab",
       "id": "way/140545589",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Elementary Particles Lab West",
       "id": "way/140548092",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Elementary Particles Lab East",
       "id": "way/140548093",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "6",
       "id": "way/140564417",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "3",
       "id": "way/140564419",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "2",
       "id": "way/140564424",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "4",
       "id": "way/140564425",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "1",
       "id": "way/140564431",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "8",
       "id": "way/140564434",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "5",
       "id": "way/140564435",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "7",
       "id": "way/140564441",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Annex",
       "id": "way/140579797",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Dillon East",
       "id": "way/140582512",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Dillon West",
       "id": "way/140582514",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Thermal Energy",
       "id": "way/140583151",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Cooling Towers",
       "id": "way/140583153",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Chilled Water Plant",
       "id": "way/140583154",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Cogen Plant",
       "id": "way/140583156",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "West Garage (Lot 7)",
       "id": "way/140583375",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Wawa",
       "id": "way/140588140",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Tiger Inn",
       "id": "way/141087518",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Colonial Club",
       "id": "way/141087521",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Carl A. Fields Center",
       "id": "way/141089469",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "J Wing",
       "id": "way/141136930",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "C Wing",
       "id": "way/141136931",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "B Wing",
       "id": "way/141136932",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "A Wing",
       "id": "way/141136933",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "E Wing",
       "id": "way/141136934",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "F Wing",
       "id": "way/141136935",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "G",
       "id": "way/141136936",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "D Wing",
       "id": "way/141136940",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Von Neumann Lab",
       "id": "way/141137114",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Bowen Hall",
       "id": "way/141138010",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "110 Prospect Avenue",
       "id": "way/141138113",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "116 Prospect Avenue",
       "id": "way/141138252",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "114 Prospect Avenue",
       "id": "way/141138253",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Prospect Appartments",
       "id": "way/141163145",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Chancellor Green",
       "id": "way/141230075",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Henry House",
       "id": "way/141233380",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Maclean House",
       "id": "way/141233381",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Stanhope Hall",
       "id": "way/141233382",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Scheide Caldwell House",
       "id": "way/141233383",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "West College",
       "id": "way/141233534",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "North Guard Booth",
       "id": "way/141295783",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Hamilton Hall",
       "id": "way/141297739",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Madison Hall",
       "id": "way/141297740",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Holder Hall",
       "id": "way/141297741",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Art Museum",
       "id": "way/141446677",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Brown",
       "id": "way/141446881",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Jones Hall",
       "id": "way/141447465",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Cuyler Hall",
       "id": "way/141447892",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "1903 Hall",
       "id": "way/141447893",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Wright Hall",
       "id": "way/141448693",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Patton Hall",
       "id": "way/141449317",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "1915 Hall",
       "id": "way/141449318",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Gauss Hall",
       "id": "way/141449421",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Walker Hall",
       "id": "way/141449422",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Feinberg Hall",
       "id": "way/141449484",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "1937 Hall",
       "id": "way/141449581",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "1939 Hall",
       "id": "way/141449635",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Dodge-Osborne Hall",
       "id": "way/141449835",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "1927-Clapp Hall",
       "id": "way/141449853",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Eno Hall",
       "id": "way/141449946",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Rock Lab",
       "id": "way/141449947",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "1938 Hall",
       "id": "way/141449963",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Wilcox Hall",
       "id": "way/141450294",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Wu Hall",
       "id": "way/141450295",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "McCosh Health Center",
       "id": "way/141450393",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Lewis Thomas Laboratory",
       "id": "way/141453139",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Scully Hall",
       "id": "way/141453509",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Center for Jewish Life",
       "id": "way/148099033",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Bloomberg Hall",
       "id": "way/182100726",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Springdale Clubhouse",
       "id": "way/300404661",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Forbes College",
       "id": "way/302942852",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Class of 1887 Boathouse",
       "id": "way/427921294",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Launch House",
       "id": "way/427921295",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Lakeside Garage",
       "id": "way/427931879",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Helm Building",
       "id": "way/427931899",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "350 Alexander Street",
       "id": "way/427931904",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "306 Alexander Street",
       "id": "way/427931905",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "294 Alexander Street",
       "id": "way/427931906",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "292 Alexander Street",
       "id": "way/427931907",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Palmer Guest House",
       "id": "way/427935016",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Palmer House Cottage",
       "id": "way/427935020",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "34 Chambers Street",
       "id": "way/427935022",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "22 Chambers Street",
       "id": "way/427935023",
       "height": 40,
-      "noFly": false
-    },
-    {
-      "name": "Labyrinth Books",
-      "id": "way/427935024",
-      "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Garden Theater",
       "id": "way/427935025",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Bainbridge House",
       "id": "way/427935026",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "194 Nassau Street",
       "id": "way/427935027",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "201 Nassau Street",
       "id": "way/427935028",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "199 Nassau Street",
       "id": "way/427935029",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "221 Nassau Street",
       "id": "way/427935030",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "66 William Street",
       "id": "way/427935031",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Olden House",
       "id": "way/427935032",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "172-190 Prospect Avenue",
       "id": "way/427935033",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Andlinger Center",
       "id": "way/428100742",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Andlinger Center",
       "id": "way/428100743",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Maeder Hall",
       "id": "way/428100744",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Green Hall",
       "id": "way/428102445",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Burr Hall",
       "id": "way/428102446",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "185 Nassau Street",
       "id": "way/428102447",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "159 Nassau Street",
       "id": "way/428102453",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "163 Nassau Street",
       "id": "way/428102454",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "169 Nassau Street",
       "id": "way/428102455",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "175 Nassau Street",
       "id": "way/428102456",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "183 Nassau Street",
       "id": "way/428102457",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "161 Nassau Court",
       "id": "way/428102458",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "165 Nassau Court",
       "id": "way/428102459",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "171 Nassau Court",
       "id": "way/428102460",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "177 Nassau Court",
       "id": "way/428102461",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "4 Mercer Street",
       "id": "way/428105912",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "11 University Place",
       "id": "way/428105914",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "19 University Place",
       "id": "way/428105915",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "23 University Place",
       "id": "way/428105916",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "27 University Place",
       "id": "way/428105923",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "17 Edwards Place",
       "id": "way/428105925",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "21 Edwards Place",
       "id": "way/428105926",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "29 Edwards Place",
       "id": "way/428105927",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "31 Edwards Place",
       "id": "way/428105928",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "18-40 Edwards Place",
       "id": "way/428105929",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Campus Club",
       "id": "way/428106567",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Tower Club",
       "id": "way/428106568",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Notestein Hall",
       "id": "way/428106569",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Terrace Club",
       "id": "way/428106570",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Princeton",
       "id": "way/429748782",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Nassau Swim Club",
       "id": "way/429751233",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Quadrangle Club",
       "id": "way/488163165",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Ivy Club",
       "id": "way/488163166",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Cap and Gown Club",
       "id": "way/488163169",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Cloister Inn",
       "id": "way/488163170",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Charter Club",
       "id": "way/488163171",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Skillman Furniture",
       "id": "way/488495586",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Soonja's Cuisine",
       "id": "way/488495588",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "The Dinky Bar & Kitchen",
       "id": "way/488495590",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "West Lodge",
       "id": "way/488495591",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Wyman House",
       "id": "way/488495592",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Wyman Cottage",
       "id": "way/488495593",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "University NOW Day Nursery",
       "id": "way/489481141",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Bobst Hall",
       "id": "way/490228561",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     }
   ],
@@ -65217,534 +65447,712 @@
     {
       "name": "North Stanworth Drive",
       "id": "way/11640451",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Fitzrandolph Road",
       "id": "way/11640456",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Fitzrandolph Road",
       "id": "way/11640457",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "South Stanworth Drive",
       "id": "way/11640672",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Harrison Lane",
       "id": "way/11641498",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "William Street",
       "id": "way/11641569",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Stanworth Lane",
       "id": "way/11642030",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Halsey Street",
       "id": "way/11642130",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "University Place",
       "id": "way/11642143",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Broadmead Street",
       "id": "way/11642579",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Faculty Road",
       "id": "way/11642596",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Butler Avenue",
       "id": "way/11642643",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Roper Lane",
       "id": "way/11643539",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Halsey Court",
       "id": "way/11643729",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Hartley Avenue",
       "id": "way/11644031",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Ivy Lane",
       "id": "way/11644247",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Edwards Place",
       "id": "way/11644522",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "College Road West",
       "id": "way/11644583",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "King Street",
       "id": "way/11646113",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "College Road",
       "id": "way/11646964",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "West Drive",
       "id": "way/11647041",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "East Stanworth Drive",
       "id": "way/11647224",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Devereux Avenue",
       "id": "way/11647259",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Chancellor Way",
       "id": "way/11647360",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "service",
       "noFly": false
     },
     {
       "name": "Eisenhower Street",
       "id": "way/11647594",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Western Way",
       "id": "way/11647624",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Prospect Avenue",
       "id": "way/11648127",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Marshall Avenue",
       "id": "way/11648153",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Pyne Drive",
       "id": "way/27313080",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Chapel Drive",
       "id": "way/27313151",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "service",
       "noFly": false
     },
     {
       "name": "Stadium Drive West",
       "id": "way/27313320",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "service",
       "noFly": false
     },
     {
       "name": "Frist Lane",
       "id": "way/27313396",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "service",
       "noFly": false
     },
     {
       "name": "Karen Court",
       "id": "way/27316930",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Washington Road",
       "id": "way/27337185",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "tertiary",
       "noFly": false
     },
     {
       "name": "Washington Road",
       "id": "way/27337186",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "tertiary",
       "noFly": false
     },
     {
       "name": "Streicker Walk",
       "id": "way/40775665",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "footway",
       "noFly": false
     },
     {
       "name": "Butler Avenue",
       "id": "way/48427228",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Devereux Avenue",
       "id": "way/48427229",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Washington Road",
       "id": "way/61598710",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "tertiary",
       "noFly": false
     },
     {
       "name": "Streicker Bridge",
       "id": "way/140558246",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "footway",
       "noFly": false
     },
     {
       "name": "Baker Lane",
       "id": "way/140579992",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Faculty Road",
       "id": "way/140635294",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Faculty Road",
       "id": "way/140635296",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Elm Drive",
       "id": "way/140635298",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Elm Drive",
       "id": "way/140635299",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Faculty Road",
       "id": "way/140635300",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Faculty Road",
       "id": "way/140635302",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Faculty Road",
       "id": "way/140635303",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "West Drive",
       "id": "way/140637813",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "unclassified",
       "noFly": false
     },
     {
       "name": "Shapiro Walk",
       "id": "way/141104994",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "footway",
       "noFly": false
     },
     {
       "name": "Shapiro Walk",
       "id": "way/141105000",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "footway",
       "noFly": false
     },
     {
       "name": "Elm Drive",
       "id": "way/141295809",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "service",
       "noFly": false
     },
     {
       "name": "Elm Drive",
       "id": "way/141295810",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "service",
       "noFly": false
     },
     {
       "name": "Elm Drive",
       "id": "way/141295811",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "service",
       "noFly": false
     },
     {
       "name": "Chancellor Way",
       "id": "way/210274748",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "service",
       "noFly": false
     },
     {
       "name": "Stanworth-John Street Footpath",
       "id": "way/220619041",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "footway",
       "noFly": false
     },
     {
       "name": "Alexander Road",
       "id": "way/265103351",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "secondary",
       "noFly": false
     },
     {
       "name": "Alexander Street",
       "id": "way/265103352",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "secondary",
       "noFly": false
     },
     {
       "name": "John Street",
       "id": "way/278740717",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "South Drive",
       "id": "way/287889524",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Elm Drive",
       "id": "way/289900452",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Elm Drive",
       "id": "way/289900573",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Elm Drive",
       "id": "way/289900574",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Clubhouse Drive",
       "id": "way/297991897",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Lawrence Drive",
       "id": "way/301963640",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Clubhouse Drive",
       "id": "way/303887838",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Faculty Road",
       "id": "way/339410550",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Alexander Street",
       "id": "way/357820982",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "secondary",
       "noFly": false
     },
     {
       "name": "Tilghman Walk",
       "id": "way/358704860",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "footway",
       "noFly": false
     },
     {
       "name": "Elm Drive",
       "id": "way/360948108",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "College Road",
       "id": "way/365781849",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "College Road",
       "id": "way/365781850",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "University Place",
       "id": "way/365781867",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "South Harrison Street",
       "id": "way/369235060",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "tertiary",
       "noFly": false
     },
     {
       "name": "Hibben Magie Road",
       "id": "way/427931888",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "service",
       "noFly": false
     },
     {
       "name": "Lakeside Road",
       "id": "way/427931890",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "service",
       "noFly": false
     },
     {
       "name": "Lakeside Road",
       "id": "way/427931893",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "service",
       "noFly": false
     },
     {
       "name": "Taylor Court",
       "id": "way/427931895",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "service",
       "noFly": false
     },
     {
       "name": "Lemonick Court",
       "id": "way/427931900",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "service",
       "noFly": false
     },
     {
       "name": "South Harrison Street",
       "id": "way/427931909",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "tertiary",
       "noFly": false
     },
     {
       "name": "Olden Street",
       "id": "way/427933546",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "William Street",
       "id": "way/427933548",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Nassau Street",
       "id": "way/427933557",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "secondary",
       "noFly": false
     },
     {
       "name": "Washington Road",
       "id": "way/427934042",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "tertiary",
       "noFly": false
     },
     {
       "name": "Charlton Street",
       "id": "way/428102436",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "service",
       "noFly": false
     },
     {
       "name": "Nassau Court",
       "id": "way/428102450",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "service",
       "noFly": false
     },
     {
       "name": "South Stanworth Drive",
       "id": "way/448509233",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "North Stanworth Drive",
       "id": "way/448509235",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "residential",
       "noFly": false
     },
     {
       "name": "Alexander Street",
       "id": "way/488532423",
+      "height": 0,
+      "flyAbove": 50,
       "highway": "secondary",
       "noFly": false
     }
@@ -65754,319 +66162,406 @@
       "name": "Cannon Green",
       "id": "way/27341277",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Jadwin Gymnasium",
       "id": "way/27341529",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Poe Field",
       "id": "way/27342201",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Springdale Golf Club",
       "id": "way/27342467",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Prospect Gardens",
       "id": "way/27390529",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Myslik Field",
       "id": "way/59268014",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "1895 Field",
       "id": "way/59268016",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Plummer Field",
       "id": "way/59268021",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Lot 23",
       "id": "way/59270365",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Strubing Field",
       "id": "way/59271527",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Clarke Field",
       "id": "way/59271529",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Powers Field",
       "id": "way/140432051",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "DeNunzio Pool",
       "id": "way/140432052",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Finney Field",
       "id": "way/140432814",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Cambell Field",
       "id": "way/140432816",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Sexton Field",
       "id": "way/140433673",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Upper Strubing Field",
       "id": "way/140433675",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Lot 21",
       "id": "way/140548094",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Lot 6",
       "id": "way/140580447",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Lot 28",
       "id": "way/140586818",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Lot 20",
       "id": "way/140633178",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Lot 16",
       "id": "way/140633179",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Lot 13",
       "id": "way/141092724",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Lot 14",
       "id": "way/148097783",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Lot 25",
       "id": "way/148098011",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Lot 4",
       "id": "way/148098366",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Lot 5",
       "id": "way/148098367",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Lot 9",
       "id": "way/148121620",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Broadmead Field",
       "id": "way/185218939",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Sherrerd Field",
       "id": "way/286607059",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Lot 19",
       "id": "way/300587921",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Bedford Field",
       "id": "way/305365030",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Charles H. Rogers Wildlife Refuge",
       "id": "way/351942404",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Class of 1952 Stadium",
       "id": "way/375743776",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Lake Field",
       "id": "way/427931908",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Lot 2",
       "id": "way/428100752",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Charlton Street Substation",
       "id": "way/428102435",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Lot 1",
       "id": "way/428102442",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Lot 10",
       "id": "way/428102452",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Lot 26",
       "id": "way/428106576",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Nassau Swim Club",
       "id": "way/429752306",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Nassau Swim Club",
       "id": "way/429752307",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Washington Road Sports Fields",
       "id": "way/468483466",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Lawrence Circle Park",
       "id": "way/468748945",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Lot 40",
       "id": "way/488501982",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Lot 35",
       "id": "way/488501983",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Lot 31",
       "id": "way/488501984",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Lot 30",
       "id": "way/488501985",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Ferris Thompson Apartments",
       "id": "way/490225634",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Broadmead Swim Club",
       "id": "way/490228559",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Princeton Branch",
       "id": "way/39064700",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Trenton & Mercer County Traction Company",
       "id": "way/455579172",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     },
     {
       "name": "Trenton & Mercer County Traction Company",
       "id": "way/455579173",
       "height": 40,
+      "flyAbove": 90,
       "noFly": false
     }
-  ]
+  ],
+  "center": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "id": "relation/6365145",
+        "properties": {
+          "type": "relation",
+          "id": 6365145,
+          "tags": {
+            "amenity": "university",
+            "name": "Princeton University",
+            "type": "multipolygon"
+          },
+          "relations": [],
+          "meta": {
+            "timestamp": "2017-01-24T19:28:48Z",
+            "version": 7,
+            "changeset": 45446674,
+            "user": "christopherwrong",
+            "uid": 5183333
+          },
+          "geometry": "center"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -74.6516098,
+            40.3379113
+          ]
+        }
+      }
+    ]
+  }
 }

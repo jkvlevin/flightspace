@@ -34,8 +34,8 @@ class OrdinanceMap extends React.Component {
   }
 
   render() {
-    const cords = this.props.boundary.features[0].geometry.coordinates[0][0][0];
-    // const cords = this.props.center.features[0].geometry.coordinates;
+    // const cords = this.props.boundary.features[0].geometry.coordinates[0][0][0];
+    const cords = this.props.center.features[0].geometry.coordinates;
     return (
       <div id="map" style={{position:"relative"}}>
         <Map center={[cords[1], cords[0]]} zoom={13} style={{height:"92vh", width:"100%", zIndex:0, position:"absolute", borderRadius:"1px", borderRight:"thick double #878787"}}>
@@ -48,6 +48,11 @@ class OrdinanceMap extends React.Component {
             color="#FFFFB6"
             weight="2"
             fillColor="#2FD566"
+          />
+          <GeoJsonUpdatable
+            data={{type: "FeatureCollection", features: [this.props.selectedFeature]}}
+            color="#FFFFB6"
+            weight="4"
           />
           <GeoJsonUpdatable
             data={{type: "FeatureCollection", features: this.props.nonameFeatures}}
@@ -97,7 +102,7 @@ class OrdinanceMap extends React.Component {
 }
 
 OrdinanceMap.propTypes = {
-  // center: PropTypes.object,
+  center: PropTypes.object,
   boundary: PropTypes.object.isRequired,
   noFlyBuildings: PropTypes.array,
   flyAboveBuildings: PropTypes.array,
@@ -106,22 +111,23 @@ OrdinanceMap.propTypes = {
   isQueryingData: PropTypes.bool.isRequired,
   actions: PropTypes.object.isRequired,
   buildingsSimplified: PropTypes.array,
-  featuresSimplified: PropTypes.array,
-  nonameFeatures: PropTypes.array
+  nonameFeatures: PropTypes.array,
+  selectedFeature: PropTypes.object,
+
 };
 
 function mapStateToProps(state) {
   return {
-    // center: state.mapReducer.center,
+    center: state.mapReducer.center,
     boundary: state.mapReducer.boundary,
     noFlyBuildings: state.mapReducer.noFlyBuildings,
     flyAboveBuildings: state.mapReducer.flyAboveBuildings,
     buildingsSimplified: state.mapReducer.buildingsSimplified,
     flyAboveFeatures: state.mapReducer.flyAboveFeatures,
     noFlyFeatures: state.mapReducer.noFlyFeatures,
-    featuresSimplified: state.mapReducer.featuresSimplified,
     isQueryingData: state.mapReducer.isQueryingData,
-    nonameFeatures: state.mapReducer.nonameFeatures
+    nonameFeatures: state.mapReducer.nonameFeatures,
+    selectedFeature: state.mapReducer.selectedFeature,
   };
 }
 

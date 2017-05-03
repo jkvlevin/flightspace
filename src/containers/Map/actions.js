@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export function queryArea(area) {
   return function (dispatch, getState) {
-    if (getState().homeReducer.isQueryingData) {
+    if (getState().mapReducer.isQueryingData) {
       return null;
     } else {
       dispatch(isQuerying());
