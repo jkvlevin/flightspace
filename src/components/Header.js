@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import { Link } from 'react-router';
 
 class Header extends React.Component {
   render() {
@@ -13,7 +14,9 @@ class Header extends React.Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav pullRight>
-            <NavItem eventKey={1} href="/map">Map View</NavItem>
+            <Link to="/map">
+              <h4 style={{color:"#f8f8f8", fontWeight:"300", marginTop:"15px"}}>Map View</h4>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

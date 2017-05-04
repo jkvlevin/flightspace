@@ -8,12 +8,17 @@ import Collapsible from 'react-collapsible';
 import collapsiblecss from '../../static/collapsiblecss.css';
 import DownloadLink from 'react-download-link';
 import FileReaderInput from 'react-file-reader-input';
+import LoadIcon from 'react-icons/lib/md/cloud-download';
+import SettingsIcon from 'react-icons/lib/md/settings';
+import BuildingsIcon from 'react-icons/lib/go/home';
+import FeaturesIcon from 'react-icons/lib/md/landscape';
+import WaysIcon from 'react-icons/lib/go/milestone';
 import * as actions from './actions';
 
 class MarkupTool extends React.Component {
   constructor(props) {
    super(props);
-   this.state = { type: 'b', nameType: 'fab', baseFly: true, dBH: 40, rFH: 50}
+   this.state = { type: 'b', nameType: 'fab', baseFly: true, dBH: 40, rFH: 50, file: ''}
 
    this.handleSetNoFlyBuilding = this.handleSetNoFlyBuilding.bind(this);
    this.handleSetNoFlyFeature = this.handleSetNoFlyFeature.bind(this);
@@ -37,10 +42,10 @@ class MarkupTool extends React.Component {
     const reader = new FileReader();
     let text = '';
 
-    reader.addEventListener("load", function () {
-      console.log(reader.result);
-    }, false);
-
+    reader.addEventListener("load", function(event) {
+      const file = reader.result;
+      this.handleMapData(file);
+    }.bind(this), false);
     reader.readAsText(results[0][1]);
   }
   handleMapData(data) {
@@ -126,7 +131,7 @@ class MarkupTool extends React.Component {
 
   render() {
     return (
-      <div id="markup-tool" style={{height:"92vh", width:"100%"}}>
+      <div id="markup-tool" style={{height:"92vh", width:"100%", backgroundColor:"#f8f8f8"}}>
       { this.state.type == 'b' ?
         <SelectedFeature
           selectedSimplified={this.props.selectedSimplified}
@@ -146,13 +151,14 @@ class MarkupTool extends React.Component {
         />
       }
 
-      <div id="features-bar" style={{backgroundColor:"#f8f8f8", maxHeight:"calc(92vh - 190px)", overflow:"scroll"}}>
+      <div id="features-bar" style={{maxHeight:"calc(92vh - 190px)", overflow:"scroll"}}>
         <Tabs>
-          <TabList>
-            <Tab style={{backgroundColor:"#F8F8F8", color:"#262228", fontSize:"13px"}}> Buildings </Tab>
-            <Tab style={{backgroundColor:"#F8F8F8", color:"#262228", fontSize:"13px"}}> Ways </Tab>
-            <Tab style={{backgroundColor:"#F8F8F8", color:"#262228", fontSize:"13px"}}> Other </Tab>
-            <Tab style={{backgroundColor:"#F8F8F8", color:"#262228", fontSize:"13px"}}> Settings </Tab>
+          <TabList style={{textAlign:"center"}}>
+            <Tab style={{backgroundColor:"#F8F8F8", color:"#262228", fontSize:"20px"}}> <BuildingsIcon /> </Tab>
+            <Tab style={{backgroundColor:"#F8F8F8", color:"#262228", fontSize:"20px"}}> <WaysIcon /> </Tab>
+            <Tab style={{backgroundColor:"#F8F8F8", color:"#262228", fontSize:"20px"}}> <FeaturesIcon /> </Tab>
+            <Tab style={{backgroundColor:"#F8F8F8", color:"#262228", fontSize:"20px"}}> <SettingsIcon /> </Tab>
+            <Tab style={{backgroundColor:"#F8F8F8", color:"#262228", fontSize:"20px"}}> <LoadIcon /> </Tab>
           </TabList>
 
           <TabPanel style={{marginTop:"-8px"}}>
@@ -226,7 +232,7 @@ class MarkupTool extends React.Component {
 {/*  *****************************  Settings *****************************/}
 
           <TabPanel style={{marginTop:"-8px"}}>
-            <form style={{marginLeft:"20px", marginTop:"20px"}}>
+            <form style={{marginLeft:"20px", marginTop:"30px"}}>
               <FormGroup style={{width:"90%", borderBottom:"thin solid #878787"}}>
                 <Checkbox checked={this.state.baseFly} onChange={this.handleBaseChange}>
                   Set default base layer ordinance as "Fly Above"
@@ -260,17 +266,24 @@ class MarkupTool extends React.Component {
                   />
                 </Radio>
               </FormGroup>
-              <Button onClick={this.saveSettings}>Save Changes</Button>
+              <div style={{textAlign:"center", marginTop:"25px"}}>
+                <Button onClick={this.saveSettings} style={{backgroundColor:"#1db954", color:"#f8f8f8", borderRadius:"15px"}}>Save Changes</Button>
+              </div>
             </form>
+          </TabPanel>
+
+          <TabPanel style={{padding:"15px"}}>
+            <h5>Save your map for later use!</h5>
             <DownloadLink
 	           filename="flight_ordinance_map.json"
 	           label="Download Current Map"
 	           exportFile={this.assembleMapFile}
             />
+            <h5 style={{marginTop:"35px"}}>Upload existing map</h5>
             <FileReaderInput
               as="text"
               onChange={this.handleFileUpload}>
-              <Button>Upload existing map</Button>
+              <Button style={{borderRadius:"10px"}}>Upload Map</Button>
             </FileReaderInput>
           </TabPanel>
 

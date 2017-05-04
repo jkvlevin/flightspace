@@ -85,7 +85,7 @@ class OrdinanceMap extends React.Component {
             onClick={this.handleMapClick}
           />
         </Map>
-
+        {this.props.showForm ?
         <form style={{marginTop:"20px", zIndex:10, position:"absolute", width:"200px", marginLeft:"70px"}} onSubmit={this.handleSubmit}>
           <FormGroup>
             <InputGroup>
@@ -95,7 +95,7 @@ class OrdinanceMap extends React.Component {
               </Button></InputGroup.Button>
             </InputGroup>
           </FormGroup>
-        </form>
+        </form> : "" }
       </div>
     );
   }
@@ -112,7 +112,8 @@ OrdinanceMap.propTypes = {
   actions: PropTypes.object.isRequired,
   nonameFeatures: PropTypes.array,
   selectedFeature: PropTypes.object,
-  baseColor: PropTypes.string
+  baseColor: PropTypes.string,
+  showForm: PropTypes.bool
 };
 
 function mapStateToProps(state) {

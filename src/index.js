@@ -1,34 +1,20 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { hashHistory } from 'react-router';
-import { AppContainer } from 'react-hot-loader';
-import Root from './components/Root';
+import { Router, hashHistory } from 'react-router';
+import routes from './routes';
 import configureStore from './store/configureStore';
-import { syncHistoryWithStore } from 'react-router-redux';
+import { Provider } from 'react-redux';
 import Leaflet from 'leaflet/dist/leaflet.css';
 import Bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
 
 const store = configureStore();
 
 // Create an enhanced history that syncs navigation events with the store
-const history = syncHistoryWithStore(hashHistory, store);
-
+// const history = syncHistoryWithStore(hashHistory, store);
 
 render(
-  <AppContainer>
-    <Root store={store} history={history} />
-  </AppContainer>,
+  <Provider store={store}>
+    <Router history={hashHistory} routes={routes} />
+  </Provider>,
   document.getElementById('app')
 );
-
-if (module.hot) {
-  module.hot.accept('./components/Root', () => {
-    const NewRoot = require('./components/Root').default;
-    render(
-      <AppContainer>
-        <NewRoot store={store} history={history} />
-      </AppContainer>,
-      document.getElementById('app')
-    );
-  });
-}

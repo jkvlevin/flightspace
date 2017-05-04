@@ -10,7 +10,7 @@ class Main extends React.Component {
       <div>
         <Header />
         <div style={{width:"74%"}}>
-          <Map />
+          <Map showForm />
         </div>
         <div style={{width:"26%", float:"right"}}>
           <MarkupTool />

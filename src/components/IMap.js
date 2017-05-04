@@ -4,8 +4,8 @@ import Map from '../containers/Map/index';
 class IMap extends React.Component {
   render() {
     return (
-      <div style={{width:"100%", height:"100%", paddingTop:"4vh"}}>
-        <Map />
+      <div style={{width:"100%", height:"100vh", padding:"4vh", backgroundColor:"#282228"}}>
+        <Map showForm={false}/>
       </div>
     );
   }
