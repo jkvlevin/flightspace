@@ -13,8 +13,7 @@ class Header extends React.Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav pullRight>
-            <NavItem eventKey={2} href="#">My Maps</NavItem>
-            <NavItem eventKey={1} href="#">Logout</NavItem>
+            <NavItem eventKey={1} href="/map">Map View</NavItem>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

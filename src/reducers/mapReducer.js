@@ -12,7 +12,8 @@ const initialState = {
   flyAboveFeatures: data.namedFeatures,
   nonameFeatures: data.nonameBuildings.concat(data.nonameFeatures),
   maxFlyHeight: 400,
-  selectedFeature: {}
+  selectedFeature: {},
+  baseColor: '#2FD566'
 };
 
 export default function mapReducer(state = initialState, action) {

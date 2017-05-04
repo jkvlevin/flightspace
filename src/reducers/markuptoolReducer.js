@@ -23,17 +23,17 @@ export default function markuptoolReducer(state = initialState, action) {
     case types.UPDATE_SIMPLIFIED_BUILDING:
       return Object.assign({}, state, {
         buildingsSimplified: action.sim.slice().sort(comparator),
-        selectedSimplified: {name: '', height: '', flyAbove: ''}
+        selectedSimplified: action.selected
       });
     case types.UPDATE_SIMPLIFIED_WAYS:
       return Object.assign({}, state, {
         waysSimplified: action.sim.slice().sort(comparator),
-        selectedSimplified: {name: '', height: '', flyAbove: ''}
+        selectedSimplified: action.selected
       });
     case types.UPDATE_SIMPLIFIED_OTHER:
       return Object.assign({}, state, {
         otherSimplified: action.sim.slice().sort(comparator),
-        selectedSimplified: {name: '', height: '', flyAbove: ''}
+        selectedSimplified: action.selected
       });
     case types.SELECT_SIMPLE:
       return Object.assign({}, state, {

@@ -1,6 +1,51 @@
 import update from 'immutability-helper';
 import * as types from '../../static/actionTypes';
 
+export function loadMapFileData(data) {
+  return function (dispatch, getState) {
+    console.log(data);
+  };
+}
+
+export function changeHeight(newHeight, type) {
+  return function (dispatch, getState) {
+    let sF = JSON.parse(JSON.stringify(getState().markuptoolReducer.selectedSimplified));
+    sF.height = newHeight;
+
+    let sim = [];
+    if (type == 'fab' || type == 'nfb') {sim = getState().markuptoolReducer.buildingsSimplified;}
+    if (type == 'faw' || type == 'nfw') {sim = getState().markuptoolReducer.waysSimplified;}
+    if (type == 'fao' || type == 'nfo') {sim = getState().markuptoolReducer.otherSimplified;}
+    var i = sim.map(function(x) {return x.id; }).indexOf(sF.id);
+    sim = update(sim, {$splice: [[i, 1]]});
+    sim = update(sim, {$push: [sF]});
+
+    if (type == 'fab' || type == 'nfb') {dispatch(updateSimplifiedBuilding(sim, sF));}
+    if (type == 'faw' || type == 'nfw') {dispatch(updateSimplifiedWays(sim, sF));}
+    if (type == 'fao' || type == 'nfo') {dispatch(updatedSimplifiedOther(sim, sF));}
+  };
+}
+
+export function changeFlyAbove(newHeight, type) {
+  return function (dispatch, getState) {
+    let sF = JSON.parse(JSON.stringify(getState().markuptoolReducer.selectedSimplified));
+    sF.flyAbove = newHeight;
+
+    let sim = [];
+    if (type == 'fab' || type == 'nfb') {sim = getState().markuptoolReducer.buildingsSimplified;}
+    if (type == 'faw' || type == 'nfw') {sim = getState().markuptoolReducer.waysSimplified;}
+    if (type == 'fao' || type == 'nfo') {sim = getState().markuptoolReducer.otherSimplified;}
+    var i = sim.map(function(x) {return x.id; }).indexOf(sF.id);
+    sim = update(sim, {$splice: [[i, 1]]});
+    sim = update(sim, {$push: [sF]});
+
+    if (type == 'fab' || type == 'nfb') {dispatch(updateSimplifiedBuilding(sim, sF));}
+    if (type == 'faw' || type == 'nfw') {dispatch(updateSimplifiedWays(sim, sF));}
+    if (type == 'fao' || type == 'nfo') {dispatch(updatedSimplifiedOther(sim, sF));}
+  };
+}
+
+
 export function loadSimplified(areaData) {
   return { type: types.LOAD_SIMPLIFIED, areaData };
 }
@@ -39,14 +84,6 @@ export function changeSelected(feature, type) {
   };
 }
 
-function selectFeature(feature) {
-  return { type: types.SELECT_FEATURE, feature };
-}
-
-function selectSimple(feature) {
-  return { type: types.SELECT_SIMPLE, feature };
-}
-
 export function setNoFlyBuilding(building) {
   return function (dispatch, getState) {
     let fab = [], nof = [], f = getState().mapReducer.flyAboveBuildings;
@@ -69,7 +106,7 @@ export function setNoFlyBuilding(building) {
       }
     }
     dispatch(moveBuilding(nof, fab));
-    dispatch(updateSimplifiedBuilding(sim));
+    dispatch(updateSimplifiedBuilding(sim, {name:'', height:'', flyAbove:''}));
   }
 }
 
@@ -98,8 +135,8 @@ export function setNoFlyFeature(feature, type) {
       }
     }
     dispatch(moveFeature(nof, fab));
-    if (type == "faw") {dispatch(updateSimplifiedWays(sim));}
-    else {dispatch(updatedSimplifiedOther(sim));}
+    if (type == "faw") {dispatch(updateSimplifiedWays(sim, {name:'', height:'', flyAbove:''}));}
+    else {dispatch(updatedSimplifiedOther(sim, {name:'', height:'', flyAbove:''}));}
   }
 }
 
@@ -125,7 +162,7 @@ export function setFlyAboveBuilding(building) {
       }
     }
     dispatch(moveBuilding(nof, fab));
-    dispatch(updateSimplifiedBuilding(sim));
+    dispatch(updateSimplifiedBuilding(sim, {name:'', height:'', flyAbove:''}));
   }
 }
 
@@ -154,20 +191,27 @@ export function setFlyAboveFeature(feature, type) {
       }
     }
     dispatch(moveFeature(nof, fab));
-    if (type == "nfw") {dispatch(updateSimplifiedWays(sim));}
-    else {dispatch(updatedSimplifiedOther(sim));}
+    if (type == "nfw") {dispatch(updateSimplifiedWays(sim, {name:'', height:'', flyAbove:''}));}
+    else {dispatch(updatedSimplifiedOther(sim, {name:'', height:'', flyAbove:''}));}
   }
 }
 
 
-function updateSimplifiedBuilding(sim) {
-  return { type: types.UPDATE_SIMPLIFIED_BUILDING, sim };
+function selectFeature(feature) {
+  return { type: types.SELECT_FEATURE, feature };
 }
-function updateSimplifiedWays(sim) {
-  return { type: types.UPDATE_SIMPLIFIED_WAYS, sim };
+
+function selectSimple(feature) {
+  return { type: types.SELECT_SIMPLE, feature };
 }
-function updatedSimplifiedOther(sim) {
-  return { type: types.UPDATE_SIMPLIFIED_OTHER, sim };
+function updateSimplifiedBuilding(sim, selected) {
+  return { type: types.UPDATE_SIMPLIFIED_BUILDING, sim, selected };
+}
+function updateSimplifiedWays(sim, selected) {
+  return { type: types.UPDATE_SIMPLIFIED_WAYS, sim, selected };
+}
+function updatedSimplifiedOther(sim, selected) {
+  return { type: types.UPDATE_SIMPLIFIED_OTHER, sim, selected };
 }
 function moveBuilding(nof, fab) {
   return { type: types.MOVE_BUILDING, nof, fab };

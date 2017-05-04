@@ -38,7 +38,7 @@ class OrdinanceMap extends React.Component {
     const cords = this.props.center.features[0].geometry.coordinates;
     return (
       <div id="map" style={{position:"relative"}}>
-        <Map center={[cords[1], cords[0]]} zoom={13} style={{height:"92vh", width:"100%", zIndex:0, position:"absolute", borderRadius:"1px", borderRight:"thick double #878787"}}>
+        <Map center={[cords[1], cords[0]]} zoom={14} style={{height:"92vh", width:"100%", zIndex:0, position:"absolute", borderRadius:"1px", borderRight:"thick double #878787"}}>
           <TileLayer
             url="https://api.mapbox.com/styles/v1/mapbox/dark-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiamxldiIsImEiOiJjajBzc3BqenIwNDYxMzFqdzYwbWRtcGx5In0.pUNjlDw_oaas-HxBGdrI1Q"
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -47,7 +47,7 @@ class OrdinanceMap extends React.Component {
             data={this.props.boundary}
             color="#FFFFB6"
             weight="2"
-            fillColor="#2FD566"
+            fillColor={this.props.baseColor}
           />
           <GeoJsonUpdatable
             data={{type: "FeatureCollection", features: [this.props.selectedFeature]}}
@@ -110,10 +110,9 @@ OrdinanceMap.propTypes = {
   flyAboveFeatures: PropTypes.array,
   isQueryingData: PropTypes.bool.isRequired,
   actions: PropTypes.object.isRequired,
-  buildingsSimplified: PropTypes.array,
   nonameFeatures: PropTypes.array,
   selectedFeature: PropTypes.object,
-
+  baseColor: PropTypes.string
 };
 
 function mapStateToProps(state) {
@@ -122,12 +121,12 @@ function mapStateToProps(state) {
     boundary: state.mapReducer.boundary,
     noFlyBuildings: state.mapReducer.noFlyBuildings,
     flyAboveBuildings: state.mapReducer.flyAboveBuildings,
-    buildingsSimplified: state.mapReducer.buildingsSimplified,
     flyAboveFeatures: state.mapReducer.flyAboveFeatures,
     noFlyFeatures: state.mapReducer.noFlyFeatures,
     isQueryingData: state.mapReducer.isQueryingData,
     nonameFeatures: state.mapReducer.nonameFeatures,
     selectedFeature: state.mapReducer.selectedFeature,
+    baseColor: state.mapReducer.baseColor
   };
 }
 
