@@ -14,7 +14,8 @@ export function makeQuery(area, type, callback) {
             return callback(error, null);
           } else {
             sanitizeBuildings(data, (name, noname, simplified) => {
-              retData['namedBuildings'] = name;
+              retData['flyAboveBuildings'] = name;
+              retData['noFlyBuildings'] = [];
               retData['nonameBuildings'] = noname;
               retData['buildingsSimplified'] = simplified;
               queryAdditionalFeatures(area, (error, data) => {
@@ -23,7 +24,8 @@ export function makeQuery(area, type, callback) {
               } else {
                 // retData['additionalFeatures'] = data;
                 sanitizeFeatures(data, (name, noname, simpWays, simpOther) => {
-                  retData['namedFeatures'] = name;
+                  retData['flyAboveFeatures'] = name;
+                  retData['noFlyFeatures'] = [];
                   retData['nonameFeatures'] = noname;
                   retData['waysSimplified'] = simpWays;
                   retData['otherSimplified'] = simpOther;

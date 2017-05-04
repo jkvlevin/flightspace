@@ -6,10 +6,10 @@ const initialState = {
   center: data.center,
   boundary: data.boundary,
   isQueryingData: false,
-  flyAboveBuildings: data.namedBuildings,
-  noFlyBuildings: [],
-  noFlyFeatures: [],
-  flyAboveFeatures: data.namedFeatures,
+  flyAboveBuildings: data.flyAboveBuildings,
+  noFlyBuildings: data.noFlyBuildings,
+  noFlyFeatures: data.noFlyFeatures,
+  flyAboveFeatures: data.flyAboveFeatures,
   nonameFeatures: data.nonameBuildings.concat(data.nonameFeatures),
   maxFlyHeight: 400,
   selectedFeature: {},
@@ -21,10 +21,12 @@ export default function mapReducer(state = initialState, action) {
     case types.LOAD_AREA:
       return Object.assign({}, state, {
         center: action.areaData.center,
-        flyAboveBuildings: action.areaData.namedBuildings,
+        flyAboveBuildings: action.areaData.flyAboveBuildings,
         boundary: action.areaData.boundary,
-        flyAboveFeatures: action.areaData.namedFeatures,
-        nonameFeatures: action.areaData.nonameBuildings.concat(action.areaData.nonameFeatures),
+        flyAboveFeatures: action.areaData.flyAboveFeatures,
+        noFlyBuildings: action.areaData.noFlyBuildings,
+        noFlyFeatures: action.areaData.noFlyFeatures,
+        nonameFeatures: action.areaData.nonameFeatures.concat(action.areaData.nonameBuildings),
         isQueryingData: false
       });
     case types.IS_QUERYING:
@@ -44,6 +46,10 @@ export default function mapReducer(state = initialState, action) {
     case types.SELECT_FEATURE:
       return Object.assign({}, state, {
         selectedFeature: action.feature
+      });
+    case types.SET_BASE_COLOR:
+      return Object.assign({}, state, {
+        baseColor: action.color
       });
     default:
       return state;

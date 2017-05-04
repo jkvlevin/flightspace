@@ -8,11 +8,11 @@ class SelectedFeature extends React.Component {
         <p style={{color:"#f8f8f8", marginLeft:"10px", paddingTop:"5px"}}> Selected Feature: {this.props.selectedSimplified.name} </p>
         <Form inline style={{borderBottom:"thin solid #f8f8f8"}}>
           <FormGroup>
-            <ControlLabel style={{color:"#f8f8f8", fontWeight:"300", marginLeft:"15px"}}>Height:</ControlLabel>
+            <ControlLabel style={{color:"#f8f8f8", fontWeight:"300", marginLeft:"15px", marginRight:"25px"}}>Height:</ControlLabel>
             <input
               type="number"
               value={this.props.selectedSimplified.height}
-              style={{marginLeft:"10px", marginRight:"10px", borderRadius:"5px", padding:"8px"}}
+              style={{marginLeft:"10px", marginRight:"10px", borderRadius:"5px", padding:"8px", maxWidth:"140px"}}
               onChange={this.props.changeHeight}
               id={this.props.type}
             />

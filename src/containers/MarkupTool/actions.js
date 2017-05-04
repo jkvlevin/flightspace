@@ -1,9 +1,29 @@
 import update from 'immutability-helper';
+import { loadArea, setBaseColor } from '../Map/actions';
 import * as types from '../../static/actionTypes';
 
-export function loadMapFileData(data) {
+export function loadMapFileData(file) {
   return function (dispatch, getState) {
-    console.log(data);
+    const data = JSON.parse(file);
+    const markupData = {
+      waysSimplified: data.waysSimplified,
+      otherSimplified: data.otherSimplified,
+      buildingsSimplified: data.buildingsSimplified
+    };
+    const mapData = {
+      center: data.center,
+      boundary: data.boundary,
+      noFlyBuildings: data.noFlyBuildings,
+      flyAboveBuildings: data.flyAboveBuildings,
+      flyAboveFeatures: data.flyAboveFeatures,
+      noFlyFeatures: data.noFlyFeatures,
+      isQueryingData: data.isQueryingData,
+      nonameFeatures: data.nonameFeatures,
+      nonameBuildings: []
+    };
+    dispatch(loadSimplified(markupData));
+    dispatch(loadArea(mapData));
+    dispatch(setBaseColor(data.baseColor));
   };
 }
 

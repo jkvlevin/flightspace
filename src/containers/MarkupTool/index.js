@@ -56,7 +56,6 @@ class MarkupTool extends React.Component {
     file['waysSimplified'] = this.props.waysSimplified;
     file['otherSimplified'] = this.props.otherSimplified;
     file['buildingsSimplified'] = this.props.buildingsSimplified;
-    file['selectedSimplified'] = this.props.selectedSimplified;
     file['center'] = this.props.center;
     file['boundary'] = this.props.boundary;
     file['noFlyBuildings'] = this.props.noFlyBuildings;
@@ -66,7 +65,6 @@ class MarkupTool extends React.Component {
     file['noFlyFeatures'] = this.props.noFlyFeatures;
     file['isQueryingData'] = this.props.isQueryingData;
     file['nonameFeatures'] = this.props.nonameFeatures;
-    file['selectedFeature'] = this.props.selectedFeature;
     file['baseColor'] = this.props.baseColor;
     return(JSON.stringify(file));
   }
@@ -162,7 +160,7 @@ class MarkupTool extends React.Component {
           </TabList>
 
           <TabPanel style={{marginTop:"-8px"}}>
-            <Collapsible trigger="Fly Above" open transitionTime={100} classParentString="Collapsible-t">
+            <Collapsible trigger="Fly Above" transitionTime={100} classParentString="Collapsible-t">
               <ListGroup>
                   {this.props.buildingsSimplified.map(building => !building.noFly ?
                     <ListGroupItem key={building.id} id={building.id} name={"fab"} onClick={this.handleSelected}>
@@ -185,7 +183,7 @@ class MarkupTool extends React.Component {
           </TabPanel>
         {/*  *****************************  WAYS *****************************/}
           <TabPanel style={{marginTop:"-8px"}}>
-            <Collapsible trigger="Fly Above" open transitionTime={100} classParentString="Collapsible-t">
+            <Collapsible trigger="Fly Above" transitionTime={100} classParentString="Collapsible-t">
               <ListGroup>
                   {this.props.waysSimplified.map(way => !way.noFly ?
                     <ListGroupItem key={way.id} id={way.id} name={"faw"} onClick={this.handleSelected}>
@@ -208,7 +206,7 @@ class MarkupTool extends React.Component {
           </TabPanel>
   {/*  *****************************  Other *****************************/}
           <TabPanel style={{marginTop:"-8px"}}>
-            <Collapsible trigger="Fly Above" open transitionTime={100} classParentString="Collapsible-t">
+            <Collapsible trigger="Fly Above" transitionTime={100} classParentString="Collapsible-t">
               <ListGroup>
                   {this.props.otherSimplified.map(other => !other.noFly ?
                     <ListGroupItem key={other.id} id={other.id} name={"fao"} onClick={this.handleSelected}>
@@ -272,14 +270,14 @@ class MarkupTool extends React.Component {
             </form>
           </TabPanel>
 
-          <TabPanel style={{padding:"15px"}}>
+          <TabPanel style={{textAlign:"center", paddingTop:"15px"}}>
             <h5>Save your map for later use!</h5>
             <DownloadLink
 	           filename="flight_ordinance_map.json"
 	           label="Download Current Map"
 	           exportFile={this.assembleMapFile}
             />
-            <h5 style={{marginTop:"35px"}}>Upload existing map</h5>
+            <h5 style={{marginTop:"30px"}}>Upload existing map</h5>
             <FileReaderInput
               as="text"
               onChange={this.handleFileUpload}>

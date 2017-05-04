@@ -14,6 +14,7 @@ export function queryArea(area) {
     }).then((response) => {
       if (response.status == 200) {
         // console.log(response.data);
+        // response.data['nonameFeatures'] = response.data.nonameBuildings.concat(response.data.nonameFeatures);
         dispatch(loadArea(response.data));
         dispatch(loadSimplified(response.data));
       } else {
@@ -23,10 +24,14 @@ export function queryArea(area) {
   };
 }
 
-function isQuerying() {
+export function setBaseColor(color) {
+  return { type: types.SET_BASE_COLOR, color };
+}
+
+export function isQuerying() {
   return { type: types.IS_QUERYING };
 }
 
-function loadArea(areaData) {
+export function loadArea(areaData) {
   return { type: types.LOAD_AREA, areaData };
 }
