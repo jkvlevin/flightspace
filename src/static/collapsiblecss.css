@@ -61,7 +61,7 @@
   padding: 10px;
   color: #f8f8f8; }
   .Collapsible-t__trigger:after {
-    content: url('down-arrow2.svg');
+    content: url('next.svg');
     transform: scale(.4);
     position: absolute;
     right: 10px;
@@ -69,7 +69,7 @@
     display: block;
     transition: transform 300ms; }
   .Collapsible-t__trigger.is-open:after {
-    transform: rotateZ(180deg) scale(.5); }
+    transform: rotateZ(90deg) scale(.5); }
   .Collapsible-t__trigger.is-disabled {
     opacity: 0.5;
     background-color: grey; }

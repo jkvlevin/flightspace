@@ -2,6 +2,37 @@ import update from 'immutability-helper';
 import { loadArea, setBaseColor } from '../Map/actions';
 import * as types from '../../static/actionTypes';
 
+export function updateSettings(baseFly, dBH, rFH) {
+  return function (dispatch, getState) {
+    if(baseFly) {
+      dispatch(setBaseColor('#2FD566'));
+    } else {
+      dispatch(setBaseColor('red'));
+    }
+    const bsim = getState().markuptoolReducer.buildingsSimplified, wsim = getState().markuptoolReducer.waysSimplified, osim = getState().markuptoolReducer.otherSimplified;
+    let bH = [], ways = [], others = [];
+    for (let b in bsim) {
+      let bu = JSON.parse(JSON.stringify(bsim[b]));
+      bu.height = dBH;
+      bu.flyAbove = (parseInt(bu.height) + parseInt(rFH));
+      bH.push(bu);
+    }
+    for (let w in wsim) {
+      let wu = JSON.parse(JSON.stringify(wsim[w]));
+      wu.flyAbove = (parseInt(wu.height) + parseInt(rFH));
+      ways.push(wu);
+    }
+    for (let f in osim) {
+      let fu = JSON.parse(JSON.stringify(osim[f]));
+      fu.flyAbove = (parseInt(fu.height) + parseInt(rFH));
+      others.push(fu);
+    }
+    dispatch(updateSimplifiedBuilding(bH, {name:'', height:'', flyAbove:''}));
+    dispatch(updateSimplifiedWays(ways, {name:'', height:'', flyAbove:''}));
+    dispatch(updatedSimplifiedOther(others, {name:'', height:'', flyAbove:''}));
+  };
+}
+
 export function loadMapFileData(file) {
   return function (dispatch, getState) {
     const data = JSON.parse(file);

@@ -31,7 +31,7 @@ export default function mapReducer(state = initialState, action) {
       });
     case types.IS_QUERYING:
       return Object.assign({}, state, {
-        isQueryingData: true
+        isQueryingData: action.isQ
       });
     case types.MOVE_BUILDING:
       return Object.assign({}, state, {

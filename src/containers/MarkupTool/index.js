@@ -91,7 +91,6 @@ class MarkupTool extends React.Component {
     }
   }
   handleSelected(event) {
-    console.log(event.target.id);
     if (event.target.name == 'fab' || event.target.name == 'nfb') {
       this.setState({ type: 'b' });
     } else {
@@ -122,9 +121,7 @@ class MarkupTool extends React.Component {
     this.setState({rFH: 0});
   }
   saveSettings(event) {
-    console.log(this.state.baseFly);
-    console.log(this.state.dBH);
-    console.log(this.state.rFH);
+    this.props.actions.updateSettings(this.state.baseFly, this.state.dBH, this.state.rFH);
   }
 
   render() {

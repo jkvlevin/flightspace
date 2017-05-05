@@ -35,9 +35,9 @@ export function makeQuery(area, type, callback) {
                       return callback(error, null);
                     } else {
                       retData['center'] = data;
-                      const d = JSON.stringify(retData, null, 2);
-                      fs.writeFile('./src/static/data1.json', d, 'utf-8');
-                  //  return callback(null, retData);
+                      // const d = JSON.stringify(retData, null, 2);
+                      // fs.writeFile('./src/static/data1.json', d, 'utf-8');
+                      return callback(null, retData);
                     }
                   });
                 });
@@ -135,7 +135,7 @@ function queryAdditionalFeatures(area, callback) {
 }
 
 function queryCenter(area, type, callback) {
-  const query = '[out:json][timeout:500];'+type+'[name="'+area+'"];out center meta;';
+  const query = '[out:json][timeout:400];'+type+'[name="'+area+'"];out center meta;';
   overpass(query, (error, data) => {
     if(error) {
       console.log('center error');

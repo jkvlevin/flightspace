@@ -7,7 +7,7 @@ export function queryArea(area) {
     if (getState().mapReducer.isQueryingData) {
       return null;
     } else {
-      dispatch(isQuerying());
+      dispatch(isQuerying(true));
     }
     axios.post('/api/queryarea', {
       area: area
@@ -18,7 +18,8 @@ export function queryArea(area) {
         dispatch(loadArea(response.data));
         dispatch(loadSimplified(response.data));
       } else {
-        // console.log(response);
+        console.log(response);
+        dispatch(isQuerying(false));
       }
     });
   };
@@ -28,8 +29,8 @@ export function setBaseColor(color) {
   return { type: types.SET_BASE_COLOR, color };
 }
 
-export function isQuerying() {
-  return { type: types.IS_QUERYING };
+export function isQuerying(isQ) {
+  return { type: types.IS_QUERYING, isQ};
 }
 
 export function loadArea(areaData) {

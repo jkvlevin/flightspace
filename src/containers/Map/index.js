@@ -19,7 +19,6 @@ class OrdinanceMap extends React.Component {
    this.handleSubmit = this.handleSubmit.bind(this);
    this.handleMapClick = this.handleMapClick.bind(this);
   }
-
   handleAreaChange(event) {
     this.setState({ areaInput: event.target.value });
   }
@@ -43,12 +42,21 @@ class OrdinanceMap extends React.Component {
             url="https://api.mapbox.com/styles/v1/mapbox/dark-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiamxldiIsImEiOiJjajBzc3BqenIwNDYxMzFqdzYwbWRtcGx5In0.pUNjlDw_oaas-HxBGdrI1Q"
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           />
+          {this.props.baseColor == '#2FD566' ?
           <GeoJsonUpdatable
             data={this.props.boundary}
             color="#FFFFB6"
             weight="2"
             fillColor={this.props.baseColor}
-          />
+            key="map1"
+          /> :
+          <GeoJsonUpdatable
+            data={this.props.boundary}
+            color="#FFFFB6"
+            weight="2"
+            fillColor='red'
+            key="map2"
+          /> }
           <GeoJsonUpdatable
             data={{type: "FeatureCollection", features: [this.props.selectedFeature]}}
             color="#FFFFB6"
