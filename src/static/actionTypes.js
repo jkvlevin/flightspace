@@ -17,3 +17,8 @@ export const UPDATE_SIMPLIFIED_OTHER = 'UPDATE_SIMPLIFIED_OTHER';
 export const LOAD_SIMPLIFIED = 'LOAD_SIMPLIFIED';
 
 export const SET_BASE_COLOR = 'SET_BASE_COLOR';
+
+export const SAVE_MAP_ID = 'SAVE_MAP_ID';
+export const CLOSE_MODAL = 'CLOSE_MODAL';
+export const SHOW_MODAL = 'SHOW_MODAL';
+export const LOAD_MAP = 'LOAD_MAP';

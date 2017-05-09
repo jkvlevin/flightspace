@@ -36,3 +36,7 @@ export function isQuerying(isQ) {
 export function loadArea(areaData) {
   return { type: types.LOAD_AREA, areaData };
 }
+
+export function close() {
+  return { type: types.CLOSE_MODAL };
+}

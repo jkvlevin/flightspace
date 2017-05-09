@@ -13,7 +13,9 @@ const initialState = {
   nonameFeatures: data.nonameBuildings.concat(data.nonameFeatures),
   maxFlyHeight: 400,
   selectedFeature: {},
-  baseColor: '#2FD566'
+  baseColor: '#2FD566',
+  showSaveMessage: false,
+  saveMapId: ''
 };
 
 export default function mapReducer(state = initialState, action) {
@@ -50,6 +52,20 @@ export default function mapReducer(state = initialState, action) {
     case types.SET_BASE_COLOR:
       return Object.assign({}, state, {
         baseColor: action.color
+      });
+    case types.SAVE_MAP_ID:
+      console.log(action.id);
+      return Object.assign({}, state, {
+        saveMapId: action.id,
+        showSaveMessage: true
+      });
+    case types.SHOW_MODAL:
+    return Object.assign({}, state, {
+      showSaveMessage: true
+    });
+    case types.CLOSE_MODAL:
+      return Object.assign({}, state, {
+        showSaveMessage: false
       });
     default:
       return state;

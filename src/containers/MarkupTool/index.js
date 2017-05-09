@@ -36,6 +36,12 @@ class MarkupTool extends React.Component {
    this.assembleMapFile = this.assembleMapFile.bind(this);
    this.handleFileUpload = this.handleFileUpload.bind(this);
    this.handleMapData = this.handleMapData.bind(this);
+   this.handleStoreMap = this.handleStoreMap.bind(this);
+  }
+
+  handleStoreMap() {
+    const file = this.assembleMapFile();
+    this.props.actions.storeMap(file);
   }
 
   handleFileUpload(event, results) {
@@ -280,6 +286,7 @@ class MarkupTool extends React.Component {
               onChange={this.handleFileUpload}>
               <Button style={{borderRadius:"10px"}}>Upload Map</Button>
             </FileReaderInput>
+            <Button onClick={this.handleStoreMap} style={{marginTop:"45px", borderRadius:"15px", backgroundColor:"#278ff5", color:"#f8f8f8"}}>Create Embeddable Map</Button>
           </TabPanel>
 
         </Tabs>

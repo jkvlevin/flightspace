@@ -8,7 +8,7 @@ class SelectedFeature extends React.Component {
         <p style={{color:"#f8f8f8", marginLeft:"10px", paddingTop:"5px"}}> Selected Feature: {this.props.selectedSimplified.name} </p>
         <Form inline style={{borderBottom:"thin solid #f8f8f8"}}>
           <FormGroup>
-            <ControlLabel style={{color:"#f8f8f8", fontWeight:"300", marginLeft:"15px", marginRight:"25px"}}>Height:</ControlLabel>
+            <ControlLabel style={{color:"#f8f8f8", fontWeight:"300", marginLeft:"15px", marginRight:"25px"}}>Height (ft):</ControlLabel>
             <input
               type="number"
               value={this.props.selectedSimplified.height}
@@ -18,7 +18,7 @@ class SelectedFeature extends React.Component {
             />
           </FormGroup>
           <FormGroup style={{marginTop:"10px", paddingBottom:"10px"}}>
-            <ControlLabel style={{color:"#f8f8f8", fontWeight:"300", marginLeft:"15px", marginRight:"5px"}}>Fly Above:</ControlLabel>
+            <ControlLabel style={{color:"#f8f8f8", fontWeight:"300", marginLeft:"15px", marginRight:"5px"}}>Fly Above (ft):</ControlLabel>
             <input
               type="number"
               value={this.props.selectedSimplified.flyAbove}

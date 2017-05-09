@@ -1,6 +1,30 @@
 import update from 'immutability-helper';
 import { loadArea, setBaseColor } from '../Map/actions';
+import axios from 'axios';
 import * as types from '../../static/actionTypes';
+
+export function storeMap(mapFile) {
+  return function (dispatch, getState) {
+    axios.post('/api/storemap', {
+      map: JSON.parse(mapFile)
+    }).then((response) => {
+      if (response.status == 200) {
+        dispatch(saveMapId(response.data));
+        // dispatch(showModal());
+      } else {
+        console.log(response);
+      }
+    });
+  };
+}
+
+function saveMapId(id) {
+  return { type: types.SAVE_MAP_ID, id };
+}
+
+function showModal() {
+  return { type: types.SHOW_MODAL };
+}
 
 export function updateSettings(baseFly, dBH, rFH) {
   return function (dispatch, getState) {

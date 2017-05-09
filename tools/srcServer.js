@@ -3,13 +3,14 @@ import webpack from 'webpack';
 import path from 'path';
 import config from '../webpack.config.dev';
 import { makeQuery } from './overpassManager';
+import * as firebase from 'firebase';
 /* eslint-disable no-console */
 
 const app = express();
 const compiler = webpack(config);
+const uuidV1 = require('uuid/v1');
 
 let bodyParser = require('body-parser');
-// let pg = require('pg');
 
 // let upload = multer({dest: 'uploads'})
 
@@ -22,28 +23,32 @@ let server = app.listen(process.env.PORT || 3000, function () {
     console.log("App now running on port", port);
 });
 
-// const dburl = 'postgres://xqqxjhquwmqnwk:04e56471617e7792869af7c6aabca80efe7748955014d61e460a23f8a56f7d47@ec2-54-235-120-39.compute-1.amazonaws.com:5432/d8f3m3lsbu7b34';
-//
-// pg.defaults.ssl = true;
-// pg.connect(dburl, function(err, client) {
-//   if (err) throw err;
-//   console.log('Connected to postgres! Getting schemas...');
-// });
-
 app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
   publicPath: config.output.publicPath
 }));
 
+
 app.use(require('webpack-hot-middleware')(compiler));
 
  // to support JSON-encoded bodies
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '50mb'}));
 
 // to support URL-encoded bodies
 app.use(bodyParser.urlencoded({
   extended: true
 }));
+
+const dbconfig = {
+  apiKey: "AIzaSyAzn3Wxage9p-xZac2LxBblwF69JflBI60",
+  authDomain: "flightspace-1490667841180.firebaseapp.com",
+  databaseURL: "https://flightspace-1490667841180.firebaseio.com",
+  storageBucket: "flightspace-1490667841180.appspot.com",
+};
+
+firebase.initializeApp(dbconfig);
+const database = firebase.database();
+
 
 app.get('*', function(req, res) {
   res.sendFile(path.join( __dirname, '../src/index.html'));
@@ -61,6 +66,22 @@ app.post('/api/queryarea', function(req, res) {
   });
 });
 
+app.post('/api/storemap', function(req, res) {
+  const map = JSON.stringify(req.body.map);
+  const id = uuidV1();
+  firebase.database().ref('maps/' + id).set({
+    map: map
+  });
+  return res.status(200).send(id);
+});
+
+app.post('/api/loadsavedmap', function(req, res) {
+  const id = req.body.id;
+  firebase.database().ref('maps/'+id).once('value').then(function(snapshot) {
+    const map = snapshot.val();
+    return res.status(200).send(JSON.stringify(map));
+  });
+});
 
 // Error Middleware
 app.use(function(err, req, res, next) {

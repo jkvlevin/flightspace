@@ -14,9 +14,7 @@ class Header extends React.Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav pullRight>
-            <Link to="/map">
-              <h4 style={{color:"#f8f8f8", fontWeight:"300", marginTop:"15px"}}>Map View</h4>
-            </Link>
+            <NavItem onClick={this.props.displayMap}>Map View</NavItem>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -25,7 +23,7 @@ class Header extends React.Component {
 }
 
 Header.propTypes = {
-  username: PropTypes.string,
+  displayMap: PropTypes.func,
 };
 
 export default Header;
